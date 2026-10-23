@@ -70,21 +70,38 @@ Visual Design Reasoning 是一个面向 Codex 的通用视觉设计推理 Skill�
 
 ### Windows（用户级）
 
-将整个文件夹复制到：
+1. 下载并解压 ZIP 安装包。
+2. 打开文件资源管理器，在地址栏输入：
 
-```text
-%USERPROFILE%\.codex\skills\visual-design-reasoning\
-```
+   `%USERPROFILE%\.codex\skills\`
+
+3. 如果 `skills` 文件夹不存在，请先手动创建。
+4. 将解压得到的整个 `visual-design-reasoning` 文件夹复制到 `skills` 目录中。
+5. 确认最终路径为：
+
+   `%USERPROFILE%\.codex\skills\visual-design-reasoning\SKILL.md`
 
 ### macOS（用户级）
 
-将整个文件夹复制到：
+1. 下载并解压 ZIP 安装包。
+2. 打开以下用户级 Skills 目录：
 
-```text
-~/.codex/skills/visual-design-reasoning/
-```
+   `~/.codex/skills/`
 
-安装后如未立即被发现，请重新加载 Skills 或重启 Codex。不同产品版本的界面入口可能不同，但文件夹根目录必须保留 `SKILL.md`。
+3. 如果目录不存在，可在终端执行：
+
+   `mkdir -p ~/.codex/skills`
+
+4. 将整个 `visual-design-reasoning` 文件夹复制到 `skills` 目录中。
+5. 确认最终路径为：
+
+   `~/.codex/skills/visual-design-reasoning/SKILL.md`
+
+### 安装完成
+
+重新启动 Codex，或重新加载 Skills。
+
+**注意：** 不要将 `visual-design-reasoning` 文件夹重复嵌套。`SKILL.md` 必须直接位于该文件夹根目录。
 
 ## 调用方式
 
