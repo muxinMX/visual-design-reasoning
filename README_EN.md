@@ -82,11 +82,17 @@ The original 20 methods are preserved as a reference map, organized into maintai
 
 Cross-cutting quality checks review stage boundaries, evidence versus inference, consistency, feasibility, tool permissions, and practical executability. For the full internal mapping, see [`references/method-map.md`](references/method-map.md).
 
-## Installation
+## Versions, download, and installation
 
-Download the **V1.0.0 release ZIP** from the [Releases page](https://github.com/muxinMX/visual-design-reasoning/releases/tag/v1.0.0). Use the packaged Skill asset rather than GitHub's automatically generated source archives when following these instructions.
+### V1.0.0 Release
 
-Extract the archive. You should obtain a folder named `visual-design-reasoning` with `SKILL.md` directly inside it.
+The [V1.0.0 Release](https://github.com/muxinMX/visual-design-reasoning/releases/tag/v1.0.0) is the formal stable package. Users can download its packaged Skill ZIP and install it directly. It is a historical snapshot from the time of release and should not be assumed to include the English documentation or metadata changes added later on `main`. Use the packaged Skill asset rather than GitHub's automatically generated source archives when following the release installation steps.
+
+### main branch
+
+The [`main` branch](https://github.com/muxinMX/visual-design-reasoning) is the currently maintained repository source. It includes internationalized documentation and metadata changes added after V1.0.0, and it can be used to read the latest documentation or install the Skill manually. It is not a new Release, and documentation updates on `main` should not be interpreted as a fully retested formal release.
+
+Whether you use the release package or install manually from `main`, you should obtain a folder named `visual-design-reasoning` with `SKILL.md` directly inside it. If the downloaded `main` source folder includes a branch suffix, rename the folder to `visual-design-reasoning` before installation.
 
 ### Windows (user-level installation)
 
@@ -134,45 +140,51 @@ To request the Skill directly, include its name:
 $visual-design-reasoning Analyze this visual brief and recommend one practical design direction. Explain the tradeoffs and do not generate an image.
 ```
 
+## Case study: feasibility of a two-heads-tall character
+
+The following is an **example workflow** illustrating stage control and analysis capability. It does not claim to reproduce a specific model run, test output, or pass rate.
+
+| Item | Description |
+| --- | --- |
+| Input request | A stylized 3D character is only two heads tall and has very short limbs, yet must run, climb, and hold props. Analyze the structural conflicts first; do not generate images or prompts. |
+| Stage identified by the Skill | **Analyze** |
+| Main analysis dimensions | Silhouette readability, range of motion, joint clearance, and 3D production feasibility |
+| Output type | Design-conflict analysis, risk explanation, and minimum viable adjustment recommendations |
+| Stage control | Remain in Analyze without proceeding unprompted to Prompt or Execute |
+
 ## Example tasks
 
-**1. Character proportion and motion conflict (Analyze)**
-
-```text
-$visual-design-reasoning A stylized 3D character is only two heads tall and has extremely short limbs, yet must run, climb, and hold props. Analyze the conflicts among silhouette readability, range of motion, and 3D production. Suggest the smallest workable adjustments. Stay in Analyze. Do not generate images or prompts.
-```
-
-**2. Product exploration with one direction (Explore)**
+**1. Product exploration with one direction (Explore)**
 
 ```text
 $visual-design-reasoning Develop one low-visual-noise design direction for a compact desktop speaker suitable for a small apartment. Explain form, materials, controls, and manufacturing tradeoffs. Do not add alternative directions.
 ```
 
-**3. Multiple environment concepts (Explore)**
+**2. Multiple environment concepts (Explore)**
 
 ```text
 $visual-design-reasoning Propose three structurally distinct concepts for a railway station in this fictional world. Compare spatial layout, narrative focus, lighting, and production complexity. Do not choose a final direction for me.
 ```
 
-**4. Local image-edit prompt (Prompt)**
+**3. Local image-edit prompt (Prompt)**
 
 ```text
 $visual-design-reasoning Write an image-editing prompt that changes only the character's red jacket to dark-blue waterproof fabric. Preserve the face, body proportions, pose, framing, background, light direction, and all other garments. Output the prompt only. Do not edit the image.
 ```
 
-**5. Feasibility critique (Analyze)**
+**4. Feasibility critique (Analyze)**
 
 ```text
 $visual-design-reasoning Analyze a concept involving an extremely thin unsupported cantilever made from heavy natural stone for permanent outdoor use. Explain the visual and engineering conflicts and propose minimal viable adjustments. Stay in Analyze.
 ```
 
-**6. Direct image prompt (Prompt)**
+**5. Direct image prompt (Prompt)**
 
 ```text
 $visual-design-reasoning Write a tool-neutral hero-image prompt for a foldable travel lantern. Skip concept exploration and do not generate the image.
 ```
 
-**7. Image-to-video prompt (Prompt)**
+**6. Image-to-video prompt (Prompt)**
 
 ```text
 $visual-design-reasoning Turn this confirmed character action into a six-second image-to-video prompt with anticipation, acceleration, main action, follow-through, and a final hold. Preserve character identity, costume, and background continuity. Do not generate video.

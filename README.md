@@ -68,9 +68,17 @@ Visual Design Reasoning 是一个面向 Codex 的通用视觉设计推理 Skill�
 
 五个阶段是工作模式，不是必须依次完成的流水线。混合任务按主要交付物判断阶段；例如，“分析冲突并给出最小修正”仍可属于 Analyze。
 
-## 安装
+## 版本、下载与安装
 
-解压发布包后，应得到名为 `visual-design-reasoning` 的文件夹，并确保 `SKILL.md` 位于该文件夹根目录。
+### V1.0.0 Release
+
+[V1.0.0 Release](https://github.com/muxinMX/visual-design-reasoning/releases/tag/v1.0.0) 是正式稳定发布包，用户可以直接下载其中的 Skill ZIP 进行安装。该发布包是发布时的历史快照，不应理解为已经包含此后在 `main` 分支新增的英文文档或元数据调整。
+
+### main 分支
+
+[`main` 分支](https://github.com/muxinMX/visual-design-reasoning) 是目前持续维护的仓库源码，包含 V1.0.0 发布后新增的国际化文档与元数据修改，可用于查看最新文档或手动安装。`main` 分支不是一个新的 Release，也不代表其中每次文档更新都经过了完整的重新测试。
+
+无论使用发布包还是从 `main` 分支手动安装，都应得到名为 `visual-design-reasoning` 的文件夹，并确保 `SKILL.md` 位于该文件夹根目录。如果下载的 `main` 源码目录带有分支后缀，请在安装前将目录重命名为 `visual-design-reasoning`。
 
 ### Windows（用户级）
 
@@ -126,6 +134,18 @@ Visual Design Reasoning 是一个面向 Codex 的通用视觉设计推理 Skill�
 ```text
 $visual-design-reasoning 帮我分析这个视觉 brief，并发展一个适合的设计方向。
 ```
+
+## 案例展示：2 头身角色的造型与动作可行性分析
+
+以下是用于说明阶段控制与分析能力的**示例工作流**，不是对某次模型调用、测试输出或通过率的陈述。
+
+| 项目 | 内容 |
+|---|---|
+| 输入需求 | 一个风格化 3D 角色只有两头身、四肢很短，但需要完成奔跑、攀爬和持握等复杂动作；先分析结构冲突，暂不生成图片和提示词。 |
+| Skill 识别的阶段 | **Analyze** |
+| 主要分析维度 | 轮廓识别、动作范围、关节空间、3D 制作可行性 |
+| 输出类型 | 设计冲突分析、风险说明和最小可行调整建议 |
+| 阶段控制 | 保持在 Analyze，不擅自进入 Prompt 或 Execute |
 
 ## 典型使用示例
 
@@ -191,6 +211,7 @@ $visual-design-reasoning 把已确认的角色动作整理成 6 秒图生视频�
 visual-design-reasoning/
 ├── SKILL.md
 ├── README.md
+├── README_EN.md
 ├── LICENSE
 ├── agents/
 │   └── openai.yaml
@@ -211,6 +232,10 @@ visual-design-reasoning/
 ## 许可证
 
 本项目采用 MIT License，详见 [`LICENSE`](LICENSE)。
+
+## 反馈与建议
+
+如果遇到安装问题、Skill 调用失败、阶段控制问题，或希望提出改进建议，请通过 [GitHub Issues](https://github.com/muxinMX/visual-design-reasoning/issues) 反馈。建议尽可能附上 Codex 环境、可复现任务、预期行为和实际观察结果。
 
 ## V1.0 版本说明
 
