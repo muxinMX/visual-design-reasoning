@@ -1,6 +1,6 @@
 interface:
   display_name: "Visual Design Reasoning"
-  short_description: "Analyze visual references, reason through design choices, and create actionable prompts"
+  short_description: "Visual analysis, design reasoning, and creative prompts"
   default_prompt: "Use $visual-design-reasoning to analyze my visual brief and develop the right design direction."
 
 policy:
