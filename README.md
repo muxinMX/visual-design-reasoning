@@ -1,6 +1,10 @@
 # Visual Design Reasoning
 
+**语言 / Language：** [简体中文](README.md) | [English](README_EN.md)
+
 Visual Design Reasoning 是一个面向 Codex 的通用视觉设计推理 Skill，用于分析视觉参考、探索与深化设计方向、发现设计冲突，并将需求组织成可执行的图像或视频创作指令。
+
+**[下载 V1.0.0](https://github.com/muxinMX/visual-design-reasoning/releases/tag/v1.0.0)**
 
 ## 它解决什么问题
 
